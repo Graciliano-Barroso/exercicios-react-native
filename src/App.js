@@ -1,8 +1,9 @@
 /* Primeiro componente */
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { Button, SafeAreaView, StyleSheet } from "react-native";
 
-import Titulo from "./components/Titulo";
+import Botao from "./components/Botao";
+// import Titulo from "./components/Titulo";
 // import Aleatorio from "./components/Aleatorio";
 // import MinMax from "./components/MinMax";
 // import CompPadrao, { Comp1, Comp2 } from "./components/Mult";
@@ -10,9 +11,10 @@ import Titulo from "./components/Titulo";
 
 export default () => (
     <SafeAreaView style={style.App}>
+        <Botao />
+    {/* <Aleatorio min={1} max={60} />
         <Titulo principal="Cadastro de Produto"
                 secundario="Tela de Cadastro do Produto" />
-        {/* <Aleatorio min={1} max={60} />
         <Aleatorio min={1} max={60} />
         <Aleatorio min={1} max={60} />
         <Aleatorio min={1} max={60} />
