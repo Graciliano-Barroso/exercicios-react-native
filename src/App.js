@@ -2,7 +2,9 @@
 import React from "react";
 import { Button, SafeAreaView, StyleSheet } from "react-native";
 
-import ListaProdutosV2 from './components/produtos/ListaProdutosV2';
+import Quadrado from './components/layout/Quadrado';
+// import DigiteSeuNome from './components/DigiteSeuNome';
+// import ListaProdutosV2 from './components/produtos/ListaProdutosV2';
 // import ListaProdutos from './components/produtos/ListaProdutos';
 // import UsuarioLogado from './components/UsuarioLogado';
 // import Familia from "./components/relacao/Familia";
@@ -22,8 +24,12 @@ import ListaProdutosV2 from './components/produtos/ListaProdutosV2';
 
 export default () => (
     <SafeAreaView style={style.App}>
-        <ListaProdutosV2 />
+        <Quadrado />
+        <Quadrado cor='#F00' />
+        <Quadrado cor='#0F0' />
         {/* 
+        <DigiteSeuNome />
+        <ListaProdutosV2 />
         <ListaProdutos />
         <UsuarioLogado usuario={{ nome: 'Gui', email: 'gui@gui.com'}} />
         <UsuarioLogado usuario={{ nome: 'Ana'}} />
