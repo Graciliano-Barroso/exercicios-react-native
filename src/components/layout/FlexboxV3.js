@@ -5,7 +5,7 @@ import Quadrado from './Quadrado';
 export default props => {
     
     return (
-        <SafeAreaView style={style.FlexV1}>
+        <SafeAreaView style={style.FlexV3}>
             <Quadrado cor='#ff801a' lado={20} />
             <Quadrado cor='#50d1f6' lado={30} />
             <Quadrado cor='#dd22c1' lado={40} />
@@ -16,7 +16,7 @@ export default props => {
 }
 
 const style = StyleSheet.create({
-    FlexV1: {
+    FlexV3: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'baseline',
