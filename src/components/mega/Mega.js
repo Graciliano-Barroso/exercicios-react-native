@@ -5,10 +5,10 @@ import Estilo from '../estilo';
 export default class Mega extends Component {
 
     state = {
-        qtdeNumeros: this.props.qtdeNumeros + 2000
+        qtdeNumeros: this.props.qtdeNumeros
     }
 
-    alterarQtdeNumero(qtde) {
+    alterarQtdeNumero = (qtde) => {
         this.setState({ qtdeNumeros: qtde });
     }
 
@@ -18,7 +18,9 @@ export default class Mega extends Component {
                 <Text style={Estilo.txtG}>
                     Gerador de Mega-Sena {this.state.qtdeNumeros}
                 </Text>
-                <TextInput 
+                <TextInput
+                    keyboardType='numeric'
+                    style={{borderBottomWidth: 1}}
                     placeholder='Quantidade de Números'
                     value={this.state.qtdeNumeros}
                     onChangeText={this.alterarQtdeNumero}
