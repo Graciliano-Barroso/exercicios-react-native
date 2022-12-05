@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Text, TextInput } from 'react-native';
+import { Button, SafeAreaView, Text, TextInput } from 'react-native';
 import Estilo from '../estilo';
+
+import MegaNumero from './MegaNumero';
 
 export default class Mega extends Component {
 
@@ -40,11 +42,18 @@ export default class Mega extends Component {
         this.setState({ numeros });
     }
 
+    exibirNumeros = () => {
+         const nums = this.state.numeros;
+         return nums.map(num => {
+            return <MegaNumero key={num} styleNum={num}/>
+         });
+    }
+
     render() {
         return (
             <>
                 <Text style={Estilo.txtG}>
-                    Gerador de Mega-Sena {this.state.qtdeNumeros}
+                    Gerador de Mega-Sena
                 </Text>
                 <TextInput
                     keyboardType='numeric'
@@ -57,9 +66,14 @@ export default class Mega extends Component {
                     title='Gerar'
                     onPress={this.gerarNumeros}
                 />
-                <Text>
-                    {this.state.numeros.join(', ')}
-                </Text>
+                <SafeAreaView style={{
+                    marginTop: 20,
+                    flexDirection: 'row',
+                    flexWrap:'wrap',
+                    justifyContent: 'center'
+                }}>
+                    {this.exibirNumeros()}
+                </SafeAreaView>
             </>
         )
     }
